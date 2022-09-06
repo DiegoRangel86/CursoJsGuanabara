@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!-- Você sabe o que significa a sigla DOM? Sabe para que serve o Document Object Model? Sabe como criar uma árvore DOM para o seu site? Sabe como usar o JavaScript para manipular o DOM? Sabe para que servem os elementos Parent e Child em um DOM? Sabe utilizar os métodos getElementByTagName, getElementById, getElementByName, getElementByClassName, querySelector de acesso ao DOM no JavaScript? -->
+
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: rgb(166, 184, 220);
+            color: rgb(18, 3, 3);
+        }
+    </style>
+    <title>Primeiros passos com DOM</title>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <h2>Vamos em frente mané!</h2>
+    <p>Aprendendo a usar o <strong>DOM</strong></strong> em JavaScript</p>
+    <p>Agora vai!</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*Selecionando informações:
+            Por Marca (TAG): getElementByTagName
+            Por ID: getElementById
+            Por Nome: getElementByName
+            Por Classe: getElementByClassName
+            Por Seletor: querySelector
+        */
+
+        //window.document.write(window.document.charset)
+        //window.document.write(window.navigator.appName)
+        //window.document.write(window.document.URL)
+
+        //Por Marca (TAG): getElementByTagName    
+        /*var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+
+        window.document.write(`Texto do primeiro parágrafo é: ${p1.innerText}! <br>`)
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write(`O texto do segundo parágrafo é: ${p2.innerText} <br>`)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'*/
+
+        
+         var d = window.document.
+         //Quando a DIV for ID usar # e quando classe . ponto
+         querySelector('div#msg')
+        // d.style.color = 'yellow'
+        // d.style.background = 'blue'
+        
+
+         var idade = Number(window.prompt('Qual é a sua idade? '))
+
+         d.style.color = idade < 18 ? 'green' : 'red'
+
+    </script>
+</body>
+</html>
