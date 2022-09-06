@@ -11,7 +11,7 @@
             color: white;
             font-size: 25pt;
             font-style: Arial;
-        }        
+        }  /*Comentário em CSS*/      
         h1{
             color: black;            
         }
@@ -20,11 +20,18 @@
 <body>
     <h1>JavaScript abc</h1>
     <hr>
-    <p>Estamos avançando...</p>
+    <p>Estamos avançando...</p> <!--Comentário em HTML-->
     <script>        
-        window.alert('Olá');
-        window.confirm('Está gostando de JavaScript?');
-        window.prompt('Qual é o seu nome?');
+        function boasVindas(saudacao){
+            window.alert('Seja Bem vindo(a) ' + saudacao + '!'); 
+        };
+
+        var nome;
+
+        nome = window.prompt('Qual é o seu nome?')
+
+        boasVindas(nome);
+
     </script>
 </body>
 </html>

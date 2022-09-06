@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos Aprender JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(171, 171, 228);
+            color: white;
+            font-size: 25pt;
+            font-style: Arial;
+        }  /*Comentário em CSS*/      
+        h1{
+            color: black;            
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript abc</h1>
+    <hr>
+    <p>Estamos avançando...</p> <!--Comentário em HTML-->
+    <script>        
+        //Usando conversão para float
+        /*
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        */
+
+        //Usando conversão para número
+        /*var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        */
+
+        //Deixando o JS tratar o tipo
+        /*var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + String(s))
+        */        
+
+        var nome = window.prompt('Digite o seu nome: ');
+
+        var idade = Number(window.prompt('Digite a sua idade: '));
+
+        //Utilizando template String
+        window.alert(`Olá ${nome}, você tem ${idade} anos!`);
+
+    </script>
+</body>
+</html>
