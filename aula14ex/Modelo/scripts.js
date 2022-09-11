@@ -9,12 +9,46 @@ function contar() {
     //Recupera o elemento de resposta
     var resposta = window.document.querySelector('div#res')
 
-    //Inicializando
-    resposta.innerHTML = ''
-
     //Testando os valores inputados
+    if (
+        //Nada informado
+        Number(inicio.value.length) == 0 || 
+        Number(fim.value.length) == 0 || 
+        Number(passo.value.length) == 0
+    )
+    {
+        window.alert('[ERRO] Faltam dados')           
+        resposta.innerHTML = 'Impossível contar!' 
+    } else{
+        resposta.innerHTML = 'Contando... <br>'
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        //emoji https://unicode.org/emoji/charts-14.0/full-emoji-list.html
 
-    //Inicio
+        if (p <= 0){
+            window.alert('Passo inválido! Considerando passo 1')
+            p = 1
+        }
+
+        //Contagem crecsente
+        if (i < f){
+            for (let c = i; c <= f; c += p) {
+                resposta.innerHTML += `${c} \u{1F449}`
+            }
+        }
+        //Contagem regressiva
+        else{
+            for (let c = i;c >= f; c -= p){
+                resposta.innerHTML += `${c} \u{1F449}`
+            }
+        }
+        resposta.innerHTML += `\u{1F3C1}`
+    }
+
+
+/*
+    //Testando os valores inputados
     if (
         //Nada informado
         Number(inicio.value.length) == 0 || 
@@ -37,6 +71,9 @@ function contar() {
             window.alert('[ERRO] Dados Inválidos [FIM]')
     }
 
+    //Inicializando
+    resposta.innerHTML = ''
+    
     //Calcular os passos
     var valor = Number(inicio.value)
 
@@ -54,5 +91,6 @@ function contar() {
         valor += Number(passo.value)
 
     } while (valor <= Number(fim.value));
+*/    
 
 }
